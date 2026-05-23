@@ -402,18 +402,25 @@ img { display: block; max-width: 100%; }
 
 .guarantee-box {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  max-width: 580px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 500px;
   margin: 40px auto 0;
-  padding: 28px;
-  background: rgba(255,255,255,0.03);
-  border: var(--glass-border);
-  border-radius: var(--radius);
+  padding: 40px 32px;
+  background: linear-gradient(135deg, rgba(20,20,20,0.9), rgba(166,10,10,0.1));
+  border: 2px solid var(--color-primary);
+  border-radius: 24px;
+  box-shadow: 0 0 20px rgba(166,10,10,0.4);
+  box-sizing: border-box;
 }
-.guarantee-icon { font-size: 2.5rem; flex-shrink: 0; }
-.guarantee-box h3 { font-size: 1.1rem; margin-bottom: 8px; }
-.guarantee-box p { color: var(--color-text-muted); font-size: 0.95rem; }
+.hd-seal { flex-shrink: 0; position: relative; }
+.hd-seal img { width: 120px; height: auto; filter: drop-shadow(0 0 15px rgba(166,10,10,0.6)); }
+.guarantee-content { width: 100%; box-sizing: border-box; }
+.guarantee-content h3 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; color: #fff; }
+.guarantee-content p { color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; word-wrap: break-word; }
 
 /* ========== FAQ ========== */
 .faq-section { background: #0d0d0d; }
@@ -511,16 +518,13 @@ footer p { color: var(--color-text-muted); font-size: 0.85rem; margin-bottom: 8p
   
   /* Guarantee */
   .guarantee-box { 
-    flex-direction: column !important; 
-    text-align: center !important; 
-    align-items: center !important; 
     padding: 28px 20px !important; 
     gap: 20px !important;
     border-radius: 20px !important;
     max-width: 100% !important;
   }
-  .guarantee-box h3 { font-size: 1.2rem !important; }
-  .guarantee-box p { font-size: 0.95rem !important; }
+  .guarantee-content h3 { font-size: 1.2rem !important; }
+  .guarantee-content p { font-size: 0.95rem !important; }
   .hd-seal img { width: 100px !important; }
   
   /* About */
